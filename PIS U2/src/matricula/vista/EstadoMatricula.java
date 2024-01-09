@@ -60,6 +60,7 @@ public class EstadoMatricula extends javax.swing.JFrame {
 
     public EstadoMatricula() {
         initComponents();
+         this.setLocationRelativeTo(null);
         cargarTabla();
         UtilVistaEstado.cargarComboEstado(cbxEstado);
     }

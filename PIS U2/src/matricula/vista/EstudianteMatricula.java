@@ -94,6 +94,7 @@ public class EstudianteMatricula extends javax.swing.JFrame {
     public EstudianteMatricula() throws EmptyException {
         initComponents();
         cargarTabla();
+         this.setLocationRelativeTo(null);
     }
 
     /**
