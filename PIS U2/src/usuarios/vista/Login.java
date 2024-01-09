@@ -23,7 +23,7 @@ public class Login extends javax.swing.JFrame {
 
         txtNombre.setText(" ");
         txtUsuario.setText(" ");
-        txtContrasenia.setText(" ");
+        txtContrasenia1.setText(" ");
 //        CargarTabla();
 //        estudianteControl.setEstudiante(null);
 
@@ -32,17 +32,14 @@ public class Login extends javax.swing.JFrame {
     private Boolean Validar() {
         return (!txtNombre.getText().trim().isEmpty()
                 && !txtUsuario.getText().trim().isEmpty()
-                && !txtContrasenia.getText().trim().isEmpty());
+                && !txtContrasenia1.getText().trim().isEmpty());
     }
 
     private void Guardar() {
         if (Validar()) {
             registroControl.getRegistro1().setNombre(txtNombre.getText());
             registroControl.getRegistro1().setUsuario(txtUsuario.getText());
-            registroControl.getRegistro1().setContrasenia(txtContrasenia.getText());
-//             estudianteControl.getEstudiante1().setEdad(txtEdad.getText());
-//              estudianteControl.getEstudiante1().setCorreo(txtCorreo.getText());
-//            estudianteControl.getEstudiante1().setPromedioAcademico(txtPeriodo.getText());     
+            registroControl.getRegistro1().setContrasenia(txtContrasenia1.getText());
             if (registroControl.persist()) {
                 JOptionPane.showMessageDialog(null, "Datos guardados con exito");
                 registroControl.setRegistro(null);
@@ -73,7 +70,7 @@ public class Login extends javax.swing.JFrame {
         txtRegistrarse = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
-        txtContrasenia = new javax.swing.JTextField();
+        txtContrasenia1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -126,6 +123,11 @@ public class Login extends javax.swing.JFrame {
                         .addGap(143, 143, 143)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(txtRegistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(btnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(85, 85, 85)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -133,14 +135,9 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(53, 53, 53)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtContrasenia1, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
                             .addComponent(txtNombre)
-                            .addComponent(txtUsuario)
-                            .addComponent(txtContrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(117, 117, 117)
-                        .addComponent(txtRegistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(btnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtUsuario))))
                 .addContainerGap(113, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -157,7 +154,7 @@ public class Login extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtContrasenia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnIniciar)
@@ -263,7 +260,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField txtContrasenia;
+    private javax.swing.JPasswordField txtContrasenia1;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JButton txtRegistrarse;
     private javax.swing.JTextField txtUsuario;
