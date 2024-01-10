@@ -7,6 +7,7 @@ package usuarios.vista;
 import exeption.EmptyException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import materias.vista.materia;
 import matricula.vista.AgregarCarrera;
 import matricula.vista.AgregarMalla;
 import matricula.vista.AgregarMateria;
@@ -72,6 +73,8 @@ public class Inicio extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        jButton15 = new javax.swing.JButton();
 
         jLabel2.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 255));
@@ -121,13 +124,13 @@ public class Inicio extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(255, 255, 204));
         jButton3.setForeground(new java.awt.Color(102, 102, 255));
-        jButton3.setText("AGREGAR MATERIA");
+        jButton3.setText("AGREGAR MATERIA AL CICLO");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 140, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 190, -1));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 255));
@@ -146,8 +149,8 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 255));
-        jLabel6.setText("VERIFICAR ESTADO DE LA MATRICULA");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        jLabel6.setText("¿DESEAS AGREGAR UNA NUEVA MATERIA?");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
         jButton5.setBackground(new java.awt.Color(255, 255, 204));
         jButton5.setForeground(new java.awt.Color(102, 102, 255));
@@ -157,7 +160,7 @@ public class Inicio extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, -1, -1));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 102, 255));
@@ -176,7 +179,7 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(102, 102, 255));
-        jLabel8.setText("¿DESEAS AGREGAR UNA NUEVA MATERIA? ");
+        jLabel8.setText("¿DESEAS AGREGAR UNA MATERIA CICLO ? ");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
         jButton7.setBackground(new java.awt.Color(255, 255, 204));
@@ -294,6 +297,21 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, -1, -1));
+
+        jLabel17.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel17.setText("VERIFICAR ESTADO DE LA MATRICULA");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
+
+        jButton15.setBackground(new java.awt.Color(255, 255, 204));
+        jButton15.setForeground(new java.awt.Color(102, 102, 255));
+        jButton15.setText("AGREGAR MATERIAS");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 190, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -432,6 +450,12 @@ public class Inicio extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton14ActionPerformed
 
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        materia m1=new materia();
+        m1.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton15ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -474,6 +498,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -490,6 +515,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
